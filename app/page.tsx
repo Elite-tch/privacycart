@@ -3,7 +3,7 @@
 import React from "react";
 import { Navbar } from "@/components/Navbar";
 import { ChatInterface } from "@/components/ChatInterface";
-import { Sidebar } from "@/components/Sidebar";
+
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Shield, Sparkles, Zap, Fingerprint, Target, Cpu, Globe, ArrowRight } from "lucide-react";
 
