@@ -35,7 +35,7 @@ const SectionHeader = ({ title, subtitle, className }: { title: string, subtitle
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: 0.1 }}
-      className="text-lg text-white/80 max-w-2xl leading-relaxed"
+      className="text-lg text-white/80 max-w-[90%] md:max-w-2xl leading-relaxed"
     >
       {subtitle}
     </motion.p>
@@ -140,7 +140,7 @@ export default function Home() {
       </section>
 
       {/* 2. PROBLEM SECTION */}
-      <section className="relative z-10 py-12 px-6 max-w-[1440px] mx-auto border-t border-white/5" id="features">
+      <section className="relative z-10 py-12 px-6 md:max-w-[1440px]  mx-auto border-t border-white/5" id="features">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div>
             <SectionHeader title="The Privacy Crisis" subtitle="Traditional AI shopping assistants are surveillance engines. Every search, click, and purchase is tracked, stored, and sold." className="mb-6" />
@@ -161,7 +161,7 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="relative aspect-square md:aspect-auto  h-full min-h-[400px]   border border-red-500/10 p-4 flex flex-col justify-center items-center text-center "
+            className="relative md:aspect-square md:aspect-auto  h-full min-h-[400px]   border border-red-500/10 p-4 flex flex-col justify-center items-center text-center "
           >
             <div className="absolute inset-0 blur-3xl rounded-full opacity-20 animate-pulse" />
             <EyeOff className="w-24 h-24 text-red-500 mb-6 relative z-10" />

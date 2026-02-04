@@ -63,7 +63,7 @@ export const ProductDetailsModal = ({ product, isOpen, onClose, onAddToCart }: P
                                     </div>
                                 </div>
 
-                                <h2 className="text-4xl font-heading font-bold mb-4">{product.name}</h2>
+                                <h2 className="md:text-4xl text-2xl font-heading font-bold mb-4">{product.name}</h2>
                                 <p className="text-white/80 mb-8 leading-relaxed">{product.description}</p>
 
                                 <div className="space-y-4 mb-10">
@@ -76,10 +76,10 @@ export const ProductDetailsModal = ({ product, isOpen, onClose, onAddToCart }: P
                                     ))}
                                 </div>
 
-                                <div className="mt-auto pt-8 border-t border-white/5 flex items-center justify-between">
+                                <div className="mt-auto pt-8 border-t border-white/5 flex md:items-center gap-4 md:flex-row flex-col justify-between">
                                     <div>
                                         <p className="text-xs text-white/80 font-bold uppercase mb-1">Total Intent Value</p>
-                                        <div className="text-3xl font-bold">{product.price}</div>
+                                        <div className="md:text-3xl text-lg font-bold">{product.price}</div>
                                     </div>
                                     <button
                                         onClick={() => onAddToCart(product)}

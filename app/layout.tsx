@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${inter.variable} ${outfit.variable} font-sans antialiased selection:bg-primary/30 selection:text-white  w-[90%] mx-auto`}
+        className={`${inter.variable} ${outfit.variable} font-sans antialiased selection:bg-primary/30 selection:text-white  md:w-[90%] mx-auto`}
       >
         <Navbar />
         {children}
