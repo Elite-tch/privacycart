@@ -162,6 +162,19 @@ export default function ProductsPage() {
         }, 4000);
     };
 
+    // BODY SCROLL LOCK
+    useEffect(() => {
+        const isAnyOverlayOpen = !!selectedProduct || isCheckoutOpen || isAIOverlayOpen || isDashboardOpen;
+        if (isAnyOverlayOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "unset";
+        }
+        return () => {
+            document.body.style.overflow = "unset";
+        };
+    }, [selectedProduct, isCheckoutOpen, isAIOverlayOpen, isDashboardOpen]);
+
     const removeFromCart = (index: number) => {
         const newCart = [...cart];
         newCart.splice(index, 1);
